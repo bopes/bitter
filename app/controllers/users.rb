@@ -24,7 +24,7 @@ get 'users/:id/edit' do
 end
 
 put 'users/:id' do
-  # Save updates to a new user, redirect to '/users/:id'
+  # Save updates to a user, redirect to '/users/:id'
 
 end
 
