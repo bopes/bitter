@@ -18,6 +18,12 @@ post '/beats' do
   redirect "/"
 end
 
+post '/beats/rebeat' do
+  Beat.create(content: params[:content], user_id: session[:user].id, orig_auth_id: params[:orig_auth_id] )
+  # p params
+  redirect '/'
+end
+
 get '/beats/:id' do
   # Show individual beat page
   @beat = Beat.find(params[:id])
@@ -43,3 +49,5 @@ delete '/beats/:id' do
   beat.destroy
   redirect "/users/#{session[:user].id}"
 end
+
+

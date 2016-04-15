@@ -16,6 +16,12 @@
           <input type='hidden' name='_method' value='delete'>
           <input type="submit" value='Delete'>
         </form>
+      <% else %>
+        <form action='/beats/rebeat' method='post'>
+          <input type='hidden' name='content' value='<%= beat.content %>'>
+          <input type='hidden' name='orig_auth_id' value='<%= beat.user.id %>'>
+          <input type='submit' value='Rebeat it!'>
+        </form>
       <% end%>
     </div>
     </a>
