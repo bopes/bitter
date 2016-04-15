@@ -1,2 +1,7 @@
-<!-- Show list of all users -->
-<%= @users %>
+<h1> All Beaters </h1>
+
+<ul>
+<% @users.each do |user| %>
+<li><a href="/users/<%=user.id%>"><%= user.username %></a></li>
+<%end%>
+</ul>

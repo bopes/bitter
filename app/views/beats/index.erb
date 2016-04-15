@@ -3,9 +3,11 @@
 
   <% @beats.each do |beat|%>
     <div>
+
+      <h3><%= beat.content %></h3>
       <h4><%= beat.user.username %></h4>
-      <h5><%= beat.content %></h5>
       <p><%= beat.created_at %></p>
+      <p> --------------------------</p>
       <% if beat.user == session[:user] %>
         <form action='/beats/<%= beat.id %>/edit' method='get'>
           <input type="submit" value='Edit'>
