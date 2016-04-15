@@ -1,2 +1,148 @@
 <!-- View all beats for this user id -->
+<style>
+body {
+    background-image: url(../images/background.png);
+    color: black;
+    font-family: 'Fira Sans', sans-serif;
+
+
+/*code {
+    font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 0px 3px;
+    display: inline-block;
+    color: #52595d;
+    background-color: #E8F2F5;
+    font-size: 40%;
+    line-height: 1.4em;
+    margin-left: -1em;
+    overflow: auto;
+}
+*/
+
+form {
+    display: inline-block; //Or display: inline;
+}
+#header {
+    float: right;
+    margin-top: 5px;
+
+}
+
+#logo-image {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+#navbar {
+    float: right;
+    font-size: 15px;
+}
+
+#submit {
+    margin-left: 5px;
+    margin-right: 20px;
+
+}
+
+#navbar:hover {
+
+
+    box-shadow: 2px 2px 50px blue;
+    border-radius: 8px;
+}
+
+.button {
+    background-image: url(../images/background.png);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 100px white;
+    color: black;
+    border: 2px solid black;
+}
+
+.input {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.jumbotron {
+    margin-top: 30px;
+    text-align: center;
+    background-image: url(../images/background.png);
+    border: 5px solid white;
+    box-shadow: 2px 2px 20px #8c8c8c;
+    color: white;
+    padding-top: 50px;
+}
+
+#huge {
+    font-size: 70px;
+
+}
+
+#biglogo {
+    margin-left: 5px;
+}
+
+#feed {
+
+}
+
+#beat {
+    margin: auto;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #8c8c8c;
+    margin-top: 10px;
+    background-color: white;
+    padding-left: 20px;
+
+
+
+}
+
+
+#beat:hover {
+    box-shadow: 2px 2px 15px  #4da6ff;
+}
+
+#at {
+    font-size: 15px;
+    color: #8c8c8c;
+}
+
+#new {
+margin-left: 20%;
+margin-bottom: 30px;
+
+}
+
+textarea {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: -25px;
+}
+
+#search {
+    text-align: right;
+
+}
+
+}
+
+</style>
 <%= erb :'/beats/index' %>

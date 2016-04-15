@@ -1,6 +1,12 @@
 <!-- Create new beat. Partial will appear on user's own '/' page -->
-
+<div id="new">
 <form action='/beats' method='post'>
-  <input name='content' type='text' placeholder="Enter beat here...">
-  <input type="submit" value='Beat it!'>
+  <textarea name='content' rows="2" cols="50" placeholder="Enter beat here..."></textarea>
+
+  <input type="submit" class="button" value='Beat it!'>
 </form>
+
+<form action='/users'>
+    <input class="button" id ="submit" type='submit' value='Check out other Beaters'>
+</form>
+</div>

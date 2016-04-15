@@ -1,20 +1,61 @@
 <!-- View an individual beat. If yours, have options to delete or edit -->
 
+<style>
 
-    <div id="beat">
-      <h4><img src="../images/bitter-logo-2.png" height="20px" width="20px"/><%= @beat.user.username %> <span id="at">@<%= @beat.user.username %></span></h4>
+body {
+    background-image: url(../images/background.png);
+    color: black;
+    font-family: 'Fira Sans', sans-serif;
+}
+#beat {
+    margin: auto;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #8c8c8c;
+    margin-top: 10px;
+    background-color: white;
+    padding-left: 20px
+
+
+}
+
+.button {
+    background-image: url(../images/background.png);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    float:right;
+    margin-top: -40px;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 100px white;
+    color: black;
+    border: 2px solid black;
+}
+</style>
+<form action = '/logout' method='post' id="header">
+    <input class="button" type='submit' value='Log Out'>
+  </form>
+
+<div id="beat">
+
+      <h4><a href="/beats/<%= @beat.id %>"><img class="minibutton" src="../images/bitter-logo-2.png" height="20px" width="20px"/></a><%= @beat.user.username %> <a href="/users/<%= @beat.user.id %>"><span id="at">@<%= @beat.user.username %></span></a></h4>
       <h5><%= @beat.content %></h5>
       <p><%= @beat.created_at %></p>
-      <p> --------------------------</p>
       <% if @beat.user == session[:user] %>
-        <form action='/beats/<%= beat.id %>/edit' method='get'>
+        <form action='/beats/<%= @beat.id %>/edit' method='get'>
           <input type="submit" value='Edit'>
         </form>
-        <form action='/beats/<%= beat.id %>' method='post'>
+        <form action='/beats/<%= @beat.id %>' method='post'>
           <input type='hidden' name='_method' value='delete'>
           <input type="submit" value='Delete'>
-        </form>
-      <% end%>
-    </div>
 
+        </form>
+
+      <% end%>
+
+    </div>
 

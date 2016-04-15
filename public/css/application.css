@@ -106,13 +106,66 @@ form {
     margin-top: 10px;
     background-color: white;
     padding-left: 20px
+
+
 }
 
+
 #beat:hover {
-    box-shadow: 2px 2px 15px
+    box-shadow: 2px 2px 15px  #4da6ff;
 }
 
 #at {
     font-size: 15px;
     color: #8c8c8c;
+}
+
+#new {
+margin-left: 20%;
+margin-bottom: 30px;
+
+}
+
+textarea {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: -25px;
+}
+
+#search {
+    text-align: right;
+
+}
+
+.newbutton {
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.newbutton:hover {
+    box-shadow: 1px 1px 1px #4da6ff;
+    background-image: url(../images/background.png);
+
+}
+
+#beat2 {
+    margin: auto;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #8c8c8c;
+    margin-top: 10px;
+    background-color: white;
+    padding-left: 20px;
+    text-align: center;
+
+
+}
+
+
+#beat2:hover {
+    box-shadow: 2px 2px 15px  #4da6ff;
 }
