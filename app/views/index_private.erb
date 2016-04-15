@@ -1,1 +1,13 @@
-<%= @user %>
+
+<div class="container">
+  <p>Welcome, <%= @user.username  %>!</p>
+  <h1>Welcome to Bitter - private page</h1>
+
+  <a href='/logout'>log out</a>
+
+  <%= erb :'/beats/new' %>
+
+  <%= erb :'/beats/index'%>
+
+</div>
+

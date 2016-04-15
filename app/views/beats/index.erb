@@ -1,3 +1,20 @@
 <!-- Show list of all beats. Is a partial for many pages. -->
-list of beats
-<%= @beats %>
+<!-- list of beats -->
+
+  <% @beats.each do |beat|%>
+    <div>
+      <h4><%= beat.user.username %></h4>
+      <h5><%= beat.content %></h5>
+      <p><%= beat.created_at %></p>
+      <% if beat.user == session[:user] %>
+        <form action='/beats/<%= beat.id %>/edit' method='get'>
+          <input type="submit" value='Edit'>
+        </form>
+        <form action='/beats/<%= beat.id %>' method='post'>
+          <input type='hidden' name='_method' value='delete'>
+          <input type="submit" value='Delete'>
+        </form>
+      <% end%>
+    </div>
+  <% end %>
+

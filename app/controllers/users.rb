@@ -24,6 +24,8 @@ end
 get '/users/:id' do
   # Show individual user page
   @user = User.find(params[:id])
+  @beats = @user.beats.to_a
+  @beats = @beats.sort_by{|beat| beat.created_at }.reverse
   erb :'/users/show'
 end
 
