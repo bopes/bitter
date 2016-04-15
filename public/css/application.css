@@ -106,13 +106,35 @@ form {
     margin-top: 10px;
     background-color: white;
     padding-left: 20px
+
+
 }
 
+
 #beat:hover {
-    box-shadow: 2px 2px 15px
+    box-shadow: 2px 2px 15px  #4da6ff;
 }
 
 #at {
     font-size: 15px;
     color: #8c8c8c;
+}
+
+#new {
+margin-left: 20%;
+margin-bottom: 30px;
+
+}
+
+textarea {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: -25px;
+}
+
+#search {
+    text-align: right;
+
 }

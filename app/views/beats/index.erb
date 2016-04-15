@@ -2,12 +2,12 @@
 <!-- list of beats -->
 
   <% @beats.each do |beat|%>
-    <a href="">
+
     <div id="beat">
-      <h4><img src="../images/bitter-logo-2.png" height="20px" width="20px"/><%= beat.user.username %> <span id="at">@<%= beat.user.username %></span></h4>
+
+      <h4><a href="/beats/<%= beat.id %>"><img class="minibutton" src="../images/bitter-logo-2.png" height="20px" width="20px"/></a><%= beat.user.username %> <a href="/users/<%= beat.user.id %>"><span id="at">@<%= beat.user.username %></span></a></h4>
       <h5><%= beat.content %></h5>
       <p><%= beat.created_at %></p>
-      <p> --------------------------</p>
       <% if beat.user == session[:user] %>
         <form action='/beats/<%= beat.id %>/edit' method='get'>
           <input type="submit" value='Edit'>
@@ -15,9 +15,12 @@
         <form action='/beats/<%= beat.id %>' method='post'>
           <input type='hidden' name='_method' value='delete'>
           <input type="submit" value='Delete'>
+
         </form>
+
       <% end%>
+
     </div>
-    </a>
+
   <% end %>
 
