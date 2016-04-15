@@ -10,11 +10,11 @@
       <p><%= beat.created_at %></p>
       <% if beat.user == session[:user] %>
         <form action='/beats/<%= beat.id %>/edit' method='get'>
-          <input type="submit" value='Edit'>
+          <input class="newbutton" type="submit" value='Edit'>
         </form>
         <form action='/beats/<%= beat.id %>' method='post'>
           <input type='hidden' name='_method' value='delete'>
-          <input type="submit" value='Delete'>
+          <input class="newbutton" type="submit" value='Delete'>
 
         </form>
 
