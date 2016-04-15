@@ -6,6 +6,11 @@
     <div id="beat">
 
       <h4><a href="/beats/<%= beat.id %>"><img class="minibutton" src="../images/bitter-logo-2.png" height="20px" width="20px"/></a><%= beat.user.username %> <a href="/users/<%= beat.user.id %>"><span id="at">@<%= beat.user.username %></span></a></h4>
+      <% if beat.orig_auth_id %>
+        <% orig_auth = User.find_by(id: beat.orig_auth_id) %>
+        <h5>Rebeated from @<%= orig_auth.username %></h5>
+      <% end %>
+
       <h5><%= beat.content %></h5>
       <p><%= beat.created_at %></p>
       <% if beat.user == session[:user] %>
@@ -16,6 +21,13 @@
           <input type='hidden' name='_method' value='delete'>
           <input class="newbutton" type="submit" value='Delete'>
 
+        </form>
+
+      <% else %>
+        <form action='/beats/rebeat' method='post'>
+          <input type='hidden' name='content' value='<%= beat.content %>'>
+          <input type='hidden' name='orig_auth_id' value='<%= beat.user.id %>'>
+          <input type='submit' value='Rebeat it!'>
         </form>
 
       <% end%>
