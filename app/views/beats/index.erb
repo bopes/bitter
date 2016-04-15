@@ -5,6 +5,10 @@
     <a href="">
     <div id="beat">
       <h4><img src="../images/bitter-logo-2.png" height="20px" width="20px"/><%= beat.user.username %> <span id="at">@<%= beat.user.username %></span></h4>
+      <% if beat.orig_auth_id %>
+        <% orig_auth = User.find_by(id: beat.orig_auth_id) %>
+        <h5>Rebeated from @<%= orig_auth.username %></h5>
+      <% end %>
       <h5><%= beat.content %></h5>
       <p><%= beat.created_at %></p>
       <p> --------------------------</p>
