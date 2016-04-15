@@ -16,6 +16,12 @@ charlie.password = "password"
 
 charlie.save
 
+charlie = User.new(username: "Charlie", email: "c@c.com")
+
+charlie.password = "password"
+
+charlie.save
+
 Beat.create(content: "Joe is cool", user_id: 1)
 
 
@@ -34,4 +40,5 @@ Beat.create(content: "beat 4", user_id: 2)
 
 Beat.create(content: "laste beat 3", user_id: 3)
 Beat.create(content: " last beat 4", user_id: 3)
+
 

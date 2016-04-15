@@ -1,2 +1,8 @@
 <!-- Page where you can edit your beat -->
-<%= @beat %>
+
+
+<form action='/beats/<%= "#{@beat.id}" %>' method='post'>
+  <input type='hidden' name='_method' value='put'>
+  <input name='content' type='text' value=<%="#{@beat.content}"%>>
+  <input type="submit" value='Update'>
+</form>

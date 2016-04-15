@@ -1,3 +1,7 @@
+# before "/users/*" do
+#   redirect '/' unless session[:user]
+# end
+
 get '/' do
   # Home/splash page
   if session[:user]
@@ -9,6 +13,7 @@ get '/' do
     @beats = @beats.sort_by{|beat| beat.created_at }.reverse
     erb :index_private
   else
+    @beats = Beat.all.to_a[0..4]
     erb :index_public
   end
 end
