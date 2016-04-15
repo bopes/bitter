@@ -108,6 +108,10 @@ form {
     padding-left: 20px
 }
 
+#beat:hover {
+    box-shadow: 2px 2px 15px
+}
+
 #at {
     font-size: 15px;
     color: #8c8c8c;
