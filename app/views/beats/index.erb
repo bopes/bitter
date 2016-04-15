@@ -1,3 +1,11 @@
 <!-- Show list of all beats. Is a partial for many pages. -->
-list of beats
-<%= @beats %>
+<!-- list of beats -->
+
+  <% @beats.each do |beat|%>
+    <div>
+      <h4><%= beat.user.username %></h4>
+      <h5><%= beat.content %></h5>
+      <p><%= beat.created_at %></p>
+    </div>
+  <% end %>
+
