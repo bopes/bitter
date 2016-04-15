@@ -3,8 +3,9 @@
 # end
 
 get '/users' do
-  # Show all users (list of users)
+
   @users = User.all
+
   erb :'/users/index'
 end
 

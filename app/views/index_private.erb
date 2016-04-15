@@ -1,9 +1,10 @@
 
 <div class="container">
-  <p>Welcome, <%= @user.username  %>!</p>
-  <h1>Welcome to Bitter - private page</h1>
-
-  <a href='/logout'>log out</a>
+  <h1>Welcome back, <%= @user.username  %>!</h1>
+  <ul>
+  <li><a href='/users'>ALL Beaters</a></li>
+  <li><a href='/logout'>Log Out</a></li>
+  </ul>
 
   <%= erb :'/beats/new' %>
 
