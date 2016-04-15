@@ -2,6 +2,30 @@
 
 <ul>
 <% @users.each do |user| %>
-<li><a href="/users/<%=user.id%>"><%= user.username %></a></li>
+<li><a href="/users/<%=user.id%>"><%= user.username %></a><br>
+
+
+<% if session[:user].following.include?(user) %>
+<form action="/relationships" method="POST">
+  <input type="hidden" name='_method' value="delete">
+  <input type="hidden" value=<%= user.id %> name="followed">
+  <input type="submit" value="unfollow"><br>
+</form></br>
+<% else %>
+<form action="/relationships" method="POST">
+  <input type="hidden" value=<%= user.id %> name="followed">
+  <input type="submit" value ="follow"><br>
+</form></br>
+<% end %>
+
+
+
+
+
+
+
+
+---------------------------------------------</li>
+
 <%end%>
 </ul>
